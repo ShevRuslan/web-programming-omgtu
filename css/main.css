@@ -1,0 +1,224 @@
+.header {
+  background-color: #ffffff;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #5781B7;
+  padding: 15px 64px;
+}
+.header-logo__name {
+  color: #000000;
+  text-decoration: none;
+  font-size: 40px;
+}
+.header-navbar {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+.header-navbar-search__input {
+  border: 1px solid #5781B7;
+  background-color: #F4F7FA;
+  color: #8B97A8;
+  padding: 5px 5px;
+  min-width: 450px;
+  outline: none;
+}
+.header-navbar-menu {
+  display: flex;
+  gap: 60px;
+}
+.header-navbar-menu__element {
+  list-style: none;
+}
+.header-navbar-menu__element a {
+  color: #000000;
+  text-decoration: none;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url(../fonts/Roboto-Regular.ttf);
+}
+.custom-select {
+  position: relative;
+  font-family: Arial;
+  width: 300px;
+}
+
+.custom-select select {
+  display: none; /*hide original SELECT element: */
+}
+
+.select-selected {
+  background-color: #F4F7FA;
+  border: 1px solid #5781B7;
+}
+
+/* Style the arrow inside the select element: */
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 14px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: #000000 transparent transparent transparent;
+}
+
+/* Point the arrow upwards when the select box is open (active): */
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent #000000 transparent;
+  top: 7px;
+}
+
+.select-items {
+  border: 1px solid #5781B7;
+  border-top: none;
+}
+
+/* style the items (options), including the selected item: */
+.select-items div, .select-selected {
+  color: #8B97A8;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* Style items (options): */
+.select-items {
+  position: absolute;
+  background-color: #ffffff;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+/* Hide the items when the select box is closed: */
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover, .same-as-selected {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: "Roboto";
+}
+
+.main {
+  background-color: #EDEEF0;
+  padding: 80px 0px;
+  min-height: 100vh;
+}
+.main .search {
+  border: 1px solid #5781B7;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch;
+  padding: 15px 54px;
+  gap: 16px;
+}
+.main .search-year {
+  display: flex;
+}
+.main .search-year__input {
+  border: 1px solid #5781B7;
+  background-color: #F4F7FA;
+  color: #8B97A8;
+  padding: 5px 5px;
+  outline: none;
+  width: 116px;
+  border-radius: 3px;
+  height: 100%;
+}
+.main .search-submit__button {
+  border: 1px solid #2E76D0;
+  width: 160px;
+  background-color: transparent;
+  height: 100%;
+  text-align: center;
+  cursor: pointer;
+  color: #2E76D0;
+  font-weight: bold;
+  transition: all 0.5s ease-in-out;
+}
+.main .search-submit__button:hover {
+  background-color: #2E76D0;
+  color: #ffffff;
+}
+.main .brands {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #5781B7;
+  background-color: #ffffff;
+  padding: 0px 56px;
+  padding-bottom: 56px;
+}
+.main .brands-brand {
+  width: 20%;
+  text-align: center;
+  margin-top: 82px;
+}
+.main .brands-brand a img {
+  height: 100%;
+}
+.main h1 {
+  margin-top: 100px;
+  margin-bottom: 24px;
+  margin-left: 54px;
+}
+.main .models {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: stretch;
+  border: 1px solid #5781B7;
+  background-color: #ffffff;
+  padding: 0px 56px;
+  padding-bottom: 56px;
+}
+.main .models-model {
+  width: 30%;
+  text-align: center;
+  margin-top: 82px;
+}
+.main .models-model a {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+.main .models-model a img {
+  width: 100%;
+  margin-bottom: auto;
+}
+.main .models-model a h2 {
+  color: #000000;
+  text-decoration: none;
+  margin-top: auto;
+}
+
+.footer {
+  border: 1px solid #5781B7;
+  background-color: #ffffff;
+  padding: 30px 54px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer-menu {
+  display: flex;
+  gap: 40px;
+}/*# sourceMappingURL=main.css.map */

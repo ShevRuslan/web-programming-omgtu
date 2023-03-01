@@ -1,0 +1,37 @@
+.header {
+  background-color: #ffffff;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #5781B7;
+  padding: 15px 64px;
+}
+.header-logo__name {
+  color: #000000;
+  text-decoration: none;
+  font-size: 40px;
+}
+.header-navbar {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+.header-navbar-search__input {
+  border: 1px solid #5781B7;
+  background-color: #F4F7FA;
+  color: #8B97A8;
+  padding: 5px 5px;
+  min-width: 450px;
+  outline: none;
+}
+.header-navbar-menu {
+  display: flex;
+  gap: 60px;
+}
+.header-navbar-menu__element {
+  list-style: none;
+}
+.header-navbar-menu__element a {
+  color: #000000;
+  text-decoration: none;
+}/*# sourceMappingURL=header.css.map */

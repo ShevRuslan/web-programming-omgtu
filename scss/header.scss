@@ -1,0 +1,42 @@
+@import "colors.scss";
+.header {
+  background-color: $white;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid $dark-blue;
+  padding: 15px 64px;
+  &-logo {
+    &__name {
+      color: $black;
+      text-decoration: none;
+      font-size: 40px;
+    }
+  }
+  &-navbar {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    &-search {
+      &__input {
+        border: 1px solid $dark-blue;
+        background-color: $fill-input;
+        color: $input-text;
+        padding: 5px 5px;
+        min-width: 450px;
+        outline: none;
+      }
+    }
+    &-menu {
+      display: flex;
+      gap: 60px;
+      &__element {
+        list-style: none;
+        a {
+          color: $black;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}

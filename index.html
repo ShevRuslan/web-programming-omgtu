@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/main.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-logo">
+        <a href="#" class="header-logo__name"> MyCars </a>
+      </div>
+      <div class="header-navbar">
+        <div class="header-navbar-search">
+          <input type="text" class="header-navbar-search__input" placeholder="Поиск" />
+        </div>
+        <ul class="header-navbar-menu">
+          <li class="header-navbar-menu__element">
+            <a href="#">Производители</a>
+          </li>
+          <li class="header-navbar-menu__element">
+            <a href="#">Модели</a>
+          </li>
+        </ul>
+      </div>
+      <div class="header-social">
+        <div class="social">
+          <div class="social-element">
+            <img src="img/telegramm.svg" alt="" />
+            <img src="img/vk.svg" alt="" />
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <section class="search section">
+        <div class="search-select-brand">
+          <div class="custom-select">
+            <select>
+              <option value="0">Марка</option>
+              <option value="1">Audi</option>
+              <option value="2">BMW</option>
+              <option value="3">Citroen</option>
+              <option value="4">Ford</option>
+              <option value="5">Honda</option>
+              <option value="6">Jaguar</option>
+              <option value="7">Land Rover</option>
+              <option value="8">Mercedes</option>
+              <option value="9">Mini</option>
+              <option value="10">Nissan</option>
+              <option value="11">Toyota</option>
+              <option value="12">Volvo</option>
+            </select>
+          </div>
+        </div>
+        <div class="search-select-model">
+          <div class="custom-select">
+            <select>
+              <option value="0">Модель</option>
+              <option value="1">M5</option>
+              <option value="2">M3</option>
+            </select>
+          </div>
+        </div>
+        <div class="search-year">
+          <div class="search-year-start">
+            <input type="text" class="search-year__input" placeholder="Год от" />
+          </div>
+          <div class="search-year-end">
+            <input type="text" class="search-year__input" placeholder="Год до" />
+          </div>
+        </div>
+        <div class="search-year">
+          <div class="search-year-start">
+            <input type="text" class="search-year__input" placeholder="Л.с от" />
+          </div>
+          <div class="search-year-end">
+            <input type="text" class="search-year__input" placeholder="Л.с до" />
+          </div>
+        </div>
+        <div class="search-submit">
+          <button type="submit" class="search-submit__button">ПОИСК</button>
+        </div>
+      </section>
+      <h1>Производители</h1>
+      <section class="brands">
+        <div class="brands-brand">
+          <a href="#">
+            <img src="img/bmw.png" alt="" />
+          </a>
+        </div>
+        <div class="brands-brand">
+          <a href="#">
+            <img src="img/kia.png" alt="" />
+          </a>
+        </div>
+        <div class="brands-brand">
+          <a href="#">
+            <img src="img/nissan.png" alt="" />
+          </a>
+        </div>
+        <div class="brands-brand">
+          <a href="#">
+            <img src="img/toyota.png" alt="" />
+          </a>
+        </div>
+        <div class="brands-brand">
+          <a href="#">
+            <img src="img/mercedes.png" alt="" />
+          </a>
+        </div>
+        <div class="brands-brand">
+          <a href="#">
+            <img src="img/lexus.png" alt="" />
+          </a>
+        </div>
+        <div class="brands-brand">
+          <a href="#">
+            <img src="img/lada.png" alt="" />
+          </a>
+        </div>
+        <div class="brands-brand">
+          <a href="#">
+            <img src="img/skoda.png" alt="" />
+          </a>
+        </div>
+        <div class="brands-brand">
+          <a href="#">
+            <img src="img/vag.png" alt="" />
+          </a>
+        </div>
+        <div class="brands-brand">
+          <a href="#">
+            <img src="img/subaru.png" alt="" />
+          </a>
+        </div>
+      </section>
+      <h1>Популярные модели</h1>
+      <section class="models">
+        <div class="models-model">
+          <a href="#">
+            <img src="img/camry.png" alt="" />
+            <h2>TOYOTA CAMRY</h2>
+          </a>
+        </div>
+        <div class="models-model">
+          <a href="#">
+            <img src="img/forester.png" alt="" />
+            <h2>SUBARU FORESTER</h2>
+          </a>
+        </div>
+        <div class="models-model">
+          <a href="#">
+            <img src="img/solaris.png" alt="" />
+            <h2>HUYNDAI SOLARIS</h2>
+          </a>
+        </div>
+        <div class="models-model">
+          <a href="#">
+            <img src="img/cruiser.png" alt="" />
+            <h2>TOYOTA LAND CRUISER</h2>
+          </a>
+        </div>
+        <div class="models-model">
+          <a href="#">
+            <img src="img/k5.png" alt="" />
+            <h2>KIA K5</h2>
+          </a>
+        </div>
+        <div class="models-model">
+          <a href="#">
+            <img src="img/qashqai.png" alt="" />
+            <h2>NISSAN QASHQAI</h2>
+          </a>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer-menu">
+        <span>(c) 2023 MyCars</span>
+        <span>+7 999 99 99</span>
+      </div>
+    </footer>
+    <script src="js/script.js"></script>
+  </body>
+</html>
