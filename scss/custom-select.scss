@@ -11,6 +11,10 @@
 .select-selected {
   background-color: $fill-input;
   border: 1px solid $dark-blue;
+  &:hover {
+    border-color: #0052b1;
+    transition: all 0.3s ease-in-out;
+  }
 }
 
 /* Style the arrow inside the select element: */

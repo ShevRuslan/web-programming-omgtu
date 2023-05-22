@@ -17,6 +17,10 @@
       width: 400px;
       height: auto;
       margin-bottom: auto;
+      &:hover {
+        opacity: .4;
+        transition: all 0.3s ease-in-out;
+      }
     }
     h2 {
       margin-top: calc(auto + 20px);

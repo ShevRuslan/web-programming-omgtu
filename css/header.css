@@ -12,6 +12,10 @@
   text-decoration: none;
   font-size: 40px;
 }
+.header-logo__name:hover {
+  color: #646464;
+  transition: all 0.3s ease-in-out;
+}
 .header-navbar {
   display: flex;
   align-items: center;
@@ -25,6 +29,10 @@
   min-width: 450px;
   outline: none;
 }
+.header-navbar-search__input:hover {
+  border-color: #0052b1;
+  transition: all 0.3s ease-in-out;
+}
 .header-navbar-menu {
   display: flex;
   gap: 60px;
@@ -35,4 +43,8 @@
 .header-navbar-menu__element a {
   color: #000000;
   text-decoration: none;
+}
+.header-navbar-menu__element a:hover {
+  color: #646464;
+  transition: all 0.3s ease-in-out;
 }/*# sourceMappingURL=header.css.map */

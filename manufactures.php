@@ -34,7 +34,7 @@ mysqli_close($conn);
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="css/main.css" />
-  <title>Document</title>
+  <title>Производители</title>
 </head>
 
 <body>
@@ -87,18 +87,18 @@ mysqli_close($conn);
       </div>
       <div class="search-year">
         <div class="search-year-start">
-          <input type="text" class="search-year__input" placeholder="Год от" />
+          <input type="number" class="search-year__input" placeholder="Год от" />
         </div>
         <div class="search-year-end">
-          <input type="text" class="search-year__input" placeholder="Год до" />
+          <input type="number" class="search-year__input" placeholder="Год до" />
         </div>
       </div>
       <div class="search-year">
         <div class="search-year-start search-horse-start">
-          <input type="text" class="search-year__input" placeholder="Л.с от" />
+          <input type="number" class="search-year__input" placeholder="Л.с от" />
         </div>
         <div class="search-year-end search-horse-end">
-          <input type="text" class="search-year__input" placeholder="Л.с до" />
+          <input type="number" class="search-year__input" placeholder="Л.с до" />
         </div>
       </div>
       <div class="search-submit">

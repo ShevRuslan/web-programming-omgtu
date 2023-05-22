@@ -9,7 +9,7 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 
 // Получение параметров из GET-запроса
 $query = $_GET['query'];
-
+$title = "";
 if ($query) {
   // Выполняем поиск по марке, модели и описанию
   $sql = "SELECT cars.*, manufacturer.name AS manufacturer_name FROM cars JOIN manufacturer ON cars.manufacturer_id = manufacturer.id WHERE cars.name LIKE '%$query%' OR manufacturer.name LIKE '%$query%' OR cars.description LIKE '%$query%'";
@@ -25,21 +25,27 @@ if ($query) {
   $sql = "SELECT cars.*, manufacturer.name AS manufacturer_name FROM cars JOIN manufacturer ON cars.manufacturer_id = manufacturer.id WHERE 1=1";
   if (!empty($manufacturer)) {
     $sql .= " AND manufacturer.name LIKE '%$manufacturer%'";
+    $title .= " " . $manufacturer;
   }
   if (!empty($model)) {
     $sql .= " AND cars.name LIKE '%$model%'";
+    $title .= " " . $model;
   }
   if (!empty($yearStart)) {
     $sql .= " AND cars.year >= $yearStart";
+    $title .= " " . $yearStart;
   }
   if (!empty($yearEnd)) {
     $sql .= " AND cars.year <= $yearEnd";
+    $title .= " " . $yearEnd;
   }
   if (!empty($horseStart)) {
     $sql .= " AND cars.horsepower >= $horseStart";
+    $title .= " " . $horseStart;
   }
   if (!empty($horseEnd)) {
     $sql .= " AND cars.horsepower <= $horseEnd";
+    $title .= " " . $horseEnd;
   }
 }
 
@@ -86,7 +92,7 @@ mysqli_close($conn);
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="css/main.css" />
-  <title>Document</title>
+  <title><?php echo ($query) ? "Поиск: " . $query : "Поиск по характеристикам"; ?></title>
 </head>
 
 <body>
@@ -139,38 +145,42 @@ mysqli_close($conn);
       </div>
       <div class="search-year">
         <div class="search-year-start">
-          <input type="text" class="search-year__input" placeholder="Год от" />
+          <input type="number" class="search-year__input" placeholder="Год от" />
         </div>
         <div class="search-year-end">
-          <input type="text" class="search-year__input" placeholder="Год до" />
+          <input type="number" class="search-year__input" placeholder="Год до" />
         </div>
       </div>
       <div class="search-year">
         <div class="search-year-start search-horse-start">
-          <input type="text" class="search-year__input" placeholder="Л.с от" />
+          <input type="number" class="search-year__input" placeholder="Л.с от" />
         </div>
         <div class="search-year-end search-horse-end">
-          <input type="text" class="search-year__input" placeholder="Л.с до" />
+          <input type="number" class="search-year__input" placeholder="Л.с до" />
         </div>
       </div>
       <div class="search-submit">
         <button type="submit" class="search-submit__button">ПОИСК</button>
       </div>
     </section>
-    <h1>Модели:</h1>
-    <section class="cars">
-      <?php foreach ($cars as $car) : ?>
-        <div class="cars-car">
-          <a href="/car.php?id=<?php echo $car['id'] ?>">
-            <img src="<?php echo $car['photo']; ?>" alt="" />
-          </a>
-          <h2><?php echo $car['name']; ?></h2>
-          <p>Год выпуска: <?php echo $car['year']; ?></p>
-          <p>Цвет: <?php echo $car['color']; ?></p>
-          <p>Мощность: <?php echo $car['horsepower']; ?> л.с</p>
-        </div>
-      <?php endforeach; ?>
-    </section>
+    <?php if (empty($cars)) { ?>
+      <h1>Ничего не найдено!</h1>
+    <?php } else { ?>
+      <h1>Модели:</h1>
+      <section class="cars">
+        <?php foreach ($cars as $car) : ?>
+          <div class="cars-car">
+            <a href="/car.php?id=<?php echo $car['id'] ?>">
+              <img src="<?php echo $car['photo']; ?>" alt="" />
+            </a>
+            <h2><?php echo $car['name']; ?></h2>
+            <p>Год выпуска: <?php echo $car['year']; ?></p>
+            <p>Цвет: <?php echo $car['color']; ?></p>
+            <p>Мощность: <?php echo $car['horsepower']; ?> л.с</p>
+          </div>
+        <?php endforeach; ?>
+      </section>
+    <?php } ?>
   </main>
   <footer class="footer">
     <div class="footer-menu">

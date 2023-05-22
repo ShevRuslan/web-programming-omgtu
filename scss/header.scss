@@ -12,6 +12,10 @@
       color: $black;
       text-decoration: none;
       font-size: 40px;
+      &:hover {
+        color: #646464;
+        transition: all 0.3s ease-in-out;
+      }
     }
   }
   &-navbar {
@@ -26,6 +30,10 @@
         padding: 5px 5px;
         min-width: 450px;
         outline: none;
+        &:hover {
+          border-color: #0052b1;
+          transition: all 0.3s ease-in-out;
+        }
       }
     }
     &-menu {
@@ -36,6 +44,10 @@
         a {
           color: $black;
           text-decoration: none;
+          &:hover {
+            color: #646464;
+            transition: all 0.3s ease-in-out;
+          }
         }
       }
     }
