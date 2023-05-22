@@ -1,0 +1,143 @@
+@media screen and (max-width:1400px) {
+  body {
+    .header {
+      &-logo {
+        margin-right: 10px;
+      }
+      justify-content: flex-start;
+      &-social {
+        display: none;
+      }
+      &-navbar {
+        &-search__input {
+          min-width: 200px;
+        }
+      }
+    }
+    .main {
+      .brands {
+        justify-content: flex-start;
+        &-brand {
+          width: 25%;
+        }
+      }
+      .models {
+        &-model {
+          width: 48%;
+        }
+      }
+      .search {
+        flex-direction: column;
+        .custom-select {
+          width: 100%;
+        }
+        &-year {
+          width: 100%;
+          &-start,
+          &-end {
+            width: 50%;
+            input {
+              width: 100%;
+            }
+          }
+        }
+        &-submit__button {
+          width: 100%;
+          height: 40px;
+        }
+      }
+      .cars {
+        justify-content: space-between;
+        &-car {
+          width: 49%;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width:1400px) {
+  body {
+
+    .main {
+      .cars {
+        justify-content: space-between;
+        &-car {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width:1000px) {
+  body {
+    .main {
+      .brands {
+        justify-content: flex-start;
+        &-brand {
+          width: 50%;
+        }
+      }
+      .models {
+        &-model {
+          width: 100%;
+          margin-bottom: 20px;
+        }
+      }
+    }
+    .main-car {
+      .car {
+        img {
+          width: 80% !important;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width:766px) {
+  body {
+    .header {
+      justify-content: space-between;
+      padding-left: 5px;
+      padding-right: 5px;
+      &-logo {
+        &__name {
+          font-size: 20px;
+        }
+      }
+      &-navbar {
+        margin-right: 50px;
+        gap: 6px;
+        &-search__input {
+          min-width: 100px;
+          width: 100px;
+        }
+        &-menu {
+          margin-left: 10px;
+          gap: 10px;
+          font-size: 10px;
+        }
+      }
+    }
+    .main {
+      .brands {
+        justify-content: flex-start;
+        &-brand {
+          width: 100%;
+          margin-bottom: 20px;
+        }
+      }
+      .cars {
+        justify-content: space-between;
+        &-car {
+          width: 100%;
+          a {
+            text-align: center;
+            img {
+              width: 80%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
