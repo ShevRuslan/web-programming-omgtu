@@ -1,0 +1,7 @@
+RewriteEngine On
+
+# Перенаправление запросов на страницы /car/{manufacturer} на файл cars.php
+RewriteRule ^car/([a-zA-Z0-9_-]+)$ cars.php?manufacturer=$1 [L]
+
+# Перенаправление запросов на страницу /search на файл search.php
+RewriteRule ^search$ search.php [L]

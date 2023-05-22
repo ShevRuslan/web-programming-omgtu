@@ -105,6 +105,62 @@
   background-color: rgba(0, 0, 0, 0.1);
 }
 
+.cars {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 16px;
+}
+.cars-car {
+  width: 24%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #5781B7;
+  background-color: #ffffff;
+  padding: 20px;
+}
+.cars-car img {
+  width: 400px;
+  height: auto;
+  margin-bottom: auto;
+}
+.cars-car h2 {
+  margin-top: calc(auto + 20px);
+  margin-bottom: 20px;
+}
+
+.main-car {
+  display: flex;
+  justify-content: center;
+  padding-left: 10px !important;
+  padding-right: 10px !important;
+}
+.main-car .car {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid #5781B7;
+  background-color: #ffffff;
+  width: 100%;
+  gap: 8px;
+}
+.main-car .car h1 {
+  margin-left: 0px;
+  margin-top: 20px;
+}
+.main-car .car .img {
+  width: 800px;
+  height: auto;
+  margin-top: 40px;
+}
+.main-car .car .description {
+  max-width: 400px;
+  text-align: center;
+}
+
 * {
   padding: 0px;
   margin: 0px;
