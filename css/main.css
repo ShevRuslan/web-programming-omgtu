@@ -426,3 +426,57 @@
   display: flex;
   gap: 40px;
 }/*# sourceMappingURL=main.css.map */
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 100px;
+}
+.form h2 {
+  margin-bottom: 40px;
+}
+.form .wrapper-input {
+  width: 20%;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+.form .wrapper-input input,
+.form .wrapper-input textarea,
+.form .wrapper-input select {
+  width: 60%;
+}
+.form .wrapper-input label {
+  width: 40%;
+}
+.form .add__button {
+  width: 100% !important;  
+}
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
