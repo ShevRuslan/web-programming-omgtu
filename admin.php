@@ -1,4 +1,12 @@
 <?php
+
+session_start();
+
+// Проверка, если пользователь не вошел, перенаправьте его на страницу входа
+if (!isset($_SESSION['user'])) {
+    header("Location: login.php");
+    exit();
+}
 $servername = "localhost";
 $username = "root";
 $password = "";
@@ -146,6 +154,7 @@ mysqli_close($conn);
     <section class="models" style="margin-top: 100px">
 
     </section>
+    <div class="pagination"></div>
   </main>
   <div id="editModal" class="modal">
     <div class="modal-content">
@@ -248,26 +257,30 @@ mysqli_close($conn);
       });
     }
 
-    function updateCars() {
+    var currentPage = 1;
+    var itemsPerPage = 6; // То же значение, что и в PHP
 
-      var xhr = new XMLHttpRequest();
-      xhr.open('GET', 'get_cars_json.php', true);
+function updateCars() {
+  var xhr = new XMLHttpRequest();
+  xhr.open('GET', 'get_cars_json.php?page=' + currentPage, true);
 
-      xhr.onreadystatechange = function() {
-        if (xhr.readyState === 4 && xhr.status === 200) {
-          var data = JSON.parse(xhr.responseText);
-          renderCars(data);
-        }
-      };
-
-      xhr.send();
+  xhr.onreadystatechange = function() {
+    if (xhr.readyState === 4 && xhr.status === 200) {
+      var data = JSON.parse(xhr.responseText);
+      renderCars(data);
     }
+  };
 
-    function renderCars(data) {
+  xhr.send();
+}
+function changePage(newPage) {
+  currentPage = newPage;
+  updateCars();
+}
+    function renderCars({cars, totalCount}) {
       var modelsSection = document.querySelector('.models');
       modelsSection.innerHTML = ''; // Очищаем содержимое секции перед добавлением новых данных
-
-      data.forEach(function(car) {
+cars.forEach(function(car) {
         var modelDiv = document.createElement('div');
         modelDiv.classList.add('models-model');
 
@@ -334,7 +347,29 @@ mysqli_close($conn);
         modelDiv.appendChild(wrapperButtons);
 
         modelsSection.appendChild(modelDiv);
+        
       });
+      
+
+      document.querySelector(".pagination").innerHTML = ""
+      var paginationDiv = document.createElement('div');
+paginationDiv.classList.add('pagination');
+
+for (var i = 1; i <= Math.ceil(totalCount / itemsPerPage); i++) {
+  var pageButton = document.createElement('button');
+  pageButton.textContent = i;
+  pageButton.addEventListener('click', function(event) {
+    changePage(event.target.textContent);
+  });
+  console.log(currentPage, i)
+  if (+i === +currentPage) {
+    pageButton.classList.add('current-page'); // Добавляем класс к текущей странице
+  }
+
+  paginationDiv.appendChild(pageButton);
+  document.querySelector(".pagination").appendChild(paginationDiv)
+}
+
     }
 
 

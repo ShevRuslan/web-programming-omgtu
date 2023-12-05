@@ -567,3 +567,33 @@
   background-color: #2e76d0;
   color: #ffffff;
 }
+.pagination {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+.pagination button {
+  border: 1px solid #2e76d0;
+  width: 40px;
+  height: 20px;
+  background-color: transparent;
+  text-align: center;
+  cursor: pointer;
+  color: #2e76d0;
+  font-weight: bold;
+  transition: all 0.5s ease-in-out;
+}
+.pagination button:hover {
+  background-color: #2e76d0;
+  color: #ffffff;
+}
+.current-page {
+  background-color: #2e76d0 !important;
+  color: #ffffff !important;
+}
+.error {
+  text-align: center;
+}

@@ -9,7 +9,12 @@ if (!$conn) {
   die("Connection failed: " . mysqli_connect_error());
 }
 
-$sql_manufacturer = "SELECT * FROM cars";
+$page = isset($_GET['page']) ? (int)$_GET['page'] : 1;
+$itemsPerPage = 6; // Количество записей на странице
+
+$start = ($page - 1) * $itemsPerPage;
+
+$sql_manufacturer = "SELECT * FROM cars LIMIT $start, $itemsPerPage";
 $result_manufacturer = mysqli_query($conn, $sql_manufacturer);
 
 $cars = array();
@@ -27,8 +32,13 @@ if (mysqli_num_rows($result_manufacturer) > 0) {
     );
   }
 }
+$total_count_query = "SELECT COUNT(*) as total FROM cars";
+$total_count_result = mysqli_query($conn, $total_count_query);
+$total_count = mysqli_fetch_assoc($total_count_result)['total'];
 
 header('Content-Type: application/json');
-echo json_encode($cars);
+echo json_encode(['cars' => $cars, 'totalCount' => $total_count]);
+
 
 mysqli_close($conn);
+?>
