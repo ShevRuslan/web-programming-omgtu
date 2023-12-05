@@ -1,7 +1,7 @@
 <?php
 $servername = "localhost";
 $username = "root";
-$password = "root";
+$password = "";
 $dbname = "web";
 
 $conn = mysqli_connect($servername, $username, $password, $dbname);
@@ -141,7 +141,7 @@ mysqli_close($conn);
     <section class="brands">
 
     </section>
-    <h2>Модели</h2>
+    <h1>Модели</h1>
 
     <section class="models" style="margin-top: 100px">
 
@@ -190,6 +190,9 @@ mysqli_close($conn);
         var heading = document.createElement('h2');
         heading.textContent = car.name;
 
+        var wrapperButtons = document.createElement("div");
+        wrapperButtons.classList.add("wrapper-buttons");
+
         var deleteButton = document.createElement('button');
         deleteButton.classList.add('delete-button');
         deleteButton.dataset.carId = car.id;
@@ -232,12 +235,14 @@ mysqli_close($conn);
           openEditModal(car.id)
         })
 
+        
+        wrapperButtons.appendChild(deleteButton)
+        wrapperButtons.appendChild(editButton)
 
         link.appendChild(image);
         modelDiv.appendChild(link);
         modelDiv.appendChild(heading);
-        modelDiv.appendChild(deleteButton);
-        modelDiv.appendChild(editButton);
+        modelDiv.appendChild(wrapperButtons);
 
         modelsSection.appendChild(modelDiv);
       });
@@ -275,6 +280,9 @@ mysqli_close($conn);
 
         var heading = document.createElement('h2');
         heading.textContent = car.name;
+
+        var wrapperButtons = document.createElement("div");
+        wrapperButtons.classList.add("wrapper-buttons");
 
         var deleteButton = document.createElement('button');
         deleteButton.classList.add('delete-button');
@@ -318,12 +326,12 @@ mysqli_close($conn);
           openEditModalManufacturer(car.id)
         })
 
-
+        wrapperButtons.appendChild(deleteButton)
+        wrapperButtons.appendChild(editButton)
         link.appendChild(image);
         modelDiv.appendChild(link);
         modelDiv.appendChild(heading);
-        modelDiv.appendChild(deleteButton);
-        modelDiv.appendChild(editButton);
+        modelDiv.appendChild(wrapperButtons);
 
         modelsSection.appendChild(modelDiv);
       });

@@ -4,7 +4,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: 1px solid #5781B7;
+  border: 1px solid #5781b7;
   padding: 15px 64px;
 }
 .header-logo__name {
@@ -22,9 +22,9 @@
   gap: 40px;
 }
 .header-navbar-search__input {
-  border: 1px solid #5781B7;
-  background-color: #F4F7FA;
-  color: #8B97A8;
+  border: 1px solid #5781b7;
+  background-color: #f4f7fa;
+  color: #8b97a8;
   padding: 5px 5px;
   min-width: 450px;
   outline: none;
@@ -64,8 +64,8 @@
 }
 
 .select-selected {
-  background-color: #F4F7FA;
-  border: 1px solid #5781B7;
+  background-color: #f4f7fa;
+  border: 1px solid #5781b7;
 }
 .select-selected:hover {
   border-color: #0052b1;
@@ -91,13 +91,14 @@
 }
 
 .select-items {
-  border: 1px solid #5781B7;
+  border: 1px solid #5781b7;
   border-top: none;
 }
 
 /* style the items (options), including the selected item: */
-.select-items div, .select-selected {
-  color: #8B97A8;
+.select-items div,
+.select-selected {
+  color: #8b97a8;
   padding: 8px 16px;
   cursor: pointer;
   font-size: 14px;
@@ -118,7 +119,8 @@
   display: none;
 }
 
-.select-items div:hover, .same-as-selected {
+.select-items div:hover,
+.same-as-selected {
   background-color: rgba(0, 0, 0, 0.1);
 }
 
@@ -135,7 +137,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border: 1px solid #5781B7;
+  border: 1px solid #5781b7;
   background-color: #ffffff;
   padding: 20px;
 }
@@ -163,7 +165,7 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  border: 1px solid #5781B7;
+  border: 1px solid #5781b7;
   background-color: #ffffff;
   width: 100%;
   gap: 8px;
@@ -214,10 +216,12 @@
   body .main .search-year {
     width: 100%;
   }
-  body .main .search-year-start, body .main .search-year-end {
+  body .main .search-year-start,
+  body .main .search-year-end {
     width: 50%;
   }
-  body .main .search-year-start input, body .main .search-year-end input {
+  body .main .search-year-start input,
+  body .main .search-year-end input {
     width: 100%;
   }
   body .main .search-submit__button {
@@ -304,12 +308,12 @@
 }
 
 .main {
-  background-color: #EDEEF0;
+  background-color: #edeef0;
   padding: 80px 0px;
   min-height: 100vh;
 }
 .main .search {
-  border: 1px solid #5781B7;
+  border: 1px solid #5781b7;
   background-color: #ffffff;
   display: flex;
   flex-direction: row;
@@ -322,9 +326,9 @@
   display: flex;
 }
 .main .search-year__input {
-  border: 1px solid #5781B7;
-  background-color: #F4F7FA;
-  color: #8B97A8;
+  border: 1px solid #5781b7;
+  background-color: #f4f7fa;
+  color: #8b97a8;
   padding: 5px 5px;
   outline: none;
   width: 116px;
@@ -336,18 +340,18 @@
   transition: all 0.3s ease-in-out;
 }
 .main .search-submit__button {
-  border: 1px solid #2E76D0;
+  border: 1px solid #2e76d0;
   width: 160px;
   background-color: transparent;
   height: 100%;
   text-align: center;
   cursor: pointer;
-  color: #2E76D0;
+  color: #2e76d0;
   font-weight: bold;
   transition: all 0.5s ease-in-out;
 }
 .main .search-submit__button:hover {
-  background-color: #2E76D0;
+  background-color: #2e76d0;
   color: #ffffff;
 }
 .main .brands {
@@ -355,7 +359,7 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  border: 1px solid #5781B7;
+  border: 1px solid #5781b7;
   background-color: #ffffff;
   padding: 0px 56px;
   padding-bottom: 56px;
@@ -365,7 +369,7 @@
   text-align: center;
   margin-top: 82px;
 }
-.main .brands-brand:hover img {
+.main .brands-brand img:hover {
   opacity: 0.4;
   transition: all 0.3s ease-in-out;
 }
@@ -383,7 +387,7 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: stretch;
-  border: 1px solid #5781B7;
+  border: 1px solid #5781b7;
   background-color: #ffffff;
   padding: 0px 56px;
   padding-bottom: 56px;
@@ -393,7 +397,7 @@
   text-align: center;
   margin-top: 82px;
 }
-.main .models-model:hover img {
+.main .models-model img:hover {
   opacity: 0.4;
   transition: all 0.3s ease-in-out;
 }
@@ -415,7 +419,7 @@
 }
 
 .footer {
-  border: 1px solid #5781B7;
+  border: 1px solid #5781b7;
   background-color: #ffffff;
   padding: 30px 54px;
   display: flex;
@@ -425,7 +429,7 @@
 .footer-menu {
   display: flex;
   gap: 40px;
-}/*# sourceMappingURL=main.css.map */
+} /*# sourceMappingURL=main.css.map */
 .form {
   display: flex;
   flex-direction: column;
@@ -452,7 +456,7 @@
   width: 40%;
 }
 .form .add__button {
-  width: 100% !important;  
+  width: 100% !important;
 }
 .modal {
   display: none;
@@ -479,4 +483,87 @@
   right: 10px;
   font-size: 20px;
   cursor: pointer;
+}
+.main .brands {
+  align-items: stretch;
+}
+.brands .brands-brand {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.brands .brands-brand .delete-button {
+  margin-top: 20px;
+  border: 1px solid #f30606;
+  width: 160px;
+  height: 20px;
+
+  background-color: transparent;
+  text-align: center;
+  cursor: pointer;
+  color: #f30606;
+  font-weight: bold;
+  transition: all 0.5s ease-in-out;
+}
+.brands .brands-brand .delete-button:hover {
+  background-color: #f30606;
+  color: #ffffff;
+}
+.brands .brands-brand .edit-button {
+  margin-top: 20px;
+  border: 1px solid #2e76d0;
+  width: 160px;
+  height: 20px;
+  background-color: transparent;
+  text-align: center;
+  cursor: pointer;
+  color: #2e76d0;
+  font-weight: bold;
+  transition: all 0.5s ease-in-out;
+}
+.brands .brands-brand .edit-button:hover {
+  background-color: #2e76d0;
+  color: #ffffff;
+}
+
+.main .brands {
+  align-items: stretch;
+}
+.models .models-model {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.models .models-model .delete-button {
+  margin-top: 20px;
+  border: 1px solid #f30606;
+  width: 160px;
+  height: 20px;
+
+  background-color: transparent;
+  text-align: center;
+  cursor: pointer;
+  color: #f30606;
+  font-weight: bold;
+  transition: all 0.5s ease-in-out;
+}
+.models .models-model .delete-button:hover {
+  background-color: #f30606;
+  color: #ffffff;
+}
+.models .models-model .edit-button {
+  margin-top: 20px;
+  border: 1px solid #2e76d0;
+  width: 160px;
+  height: 20px;
+  background-color: transparent;
+  text-align: center;
+  cursor: pointer;
+  color: #2e76d0;
+  font-weight: bold;
+  transition: all 0.5s ease-in-out;
+}
+.models .models-model .edit-button:hover {
+  background-color: #2e76d0;
+  color: #ffffff;
 }
